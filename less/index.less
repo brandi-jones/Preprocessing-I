@@ -23,6 +23,8 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+	max-width: 100%;
+
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -55,6 +57,157 @@ table {
 
 html, body {
 	height: 100%;
-	
 }
 
+
+/*My code starts here*/
+
+@color1: #FCF5EE;
+@color2: #FBE8E7;
+@color3: #FFC4D0;
+@color4: #F7DDDE;
+
+@h2-size: 2.5rem;
+
+/*mixins*/
+.center-h2() {
+	font-size: 4rem;
+	text-align: center;
+	margin-top: 5rem;
+}
+
+
+html {
+	font-size: 62.5%;
+}
+
+
+p {
+	line-height: 3rem;
+	font-size: 2rem;
+}
+
+nav {
+	display: flex;
+	justify-content: space-evenly;
+	width: 100%;
+	padding: 1% 0 1% 0;
+
+	font-size: 2rem;
+
+	background-color: @color2;
+
+	a {
+		text-decoration: none;
+		margin: 0%;
+		background-color: @color3;
+		color: white;
+		padding: 1rem 2rem 1rem 2rem;
+		border-radius: 5%;
+	}
+}
+
+header {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+
+	background-color: @color1;
+	border-top: 1rem dotted @color4;
+	border-bottom: 1rem dotted @color4;
+
+	padding: 10% 0 10% 0;
+
+	h1 {
+		font-size: 7rem;
+		background-color: @color2;
+		padding: 5rem;
+		margin: 0 30rem 0 30rem;
+		border-radius: 2%;
+	}
+}
+
+.skills {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+
+	font-size: 2.5rem;
+	background-color: @color2;
+
+	h2 {
+		.center-h2();
+	}
+
+	div {
+		width: 50%;
+	}
+
+	ul {
+		display: flex;
+		flex-wrap: wrap;
+		margin-left: 2rem;
+
+		li{
+			padding: 2%;
+			width: 25%;
+	
+			list-style-type: circle;
+		}
+	}
+
+
+}
+
+.work-history {
+	display: flex;
+	background-color: @color4;
+
+
+	padding: 2% 0 2% 0;
+	font-size: @h2-size;
+
+	h2 {
+		.center-h2();
+	}
+
+	div {
+		width: 50%;
+	}
+
+	table {
+		width: 100%;
+	}
+
+	th {
+		font-weight: bold;
+	}
+
+	td, th {
+		border: 1px solid black;
+		text-align: left;
+		padding: .5rem;
+	}
+}
+
+.contact {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+
+	width: 100%;
+	font-size: @h2-size;
+
+	h3 {
+		font-size: 3rem;
+	}
+
+	div {
+		background-color: @color1;
+		padding: 2rem 0 2rem 0;
+
+		border-top: 1rem dotted @color4;
+		border-bottom: 1rem dotted @color4;
+	}
+}
