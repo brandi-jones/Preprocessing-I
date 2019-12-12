@@ -136,9 +136,24 @@ body {
   height: 100%;
 }
 /*My code starts here*/
+@font-face {
+  font-family: 'Pacifico';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Pacifico Regular'), local('Pacifico-Regular'), url(https://fonts.gstatic.com/s/pacifico/v16/FwZY7-Qmy14u9lezJ-6H6Mw.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Ubuntu Regular'), local('Ubuntu-Regular'), url(https://fonts.gstatic.com/s/ubuntu/v14/4iCs6KVjbNBYlgoKfw7z.ttf) format('truetype');
+}
 /*mixins*/
 html {
   font-size: 62.5%;
+  font-family: 'Pacifico', cursive;
 }
 p {
   line-height: 3rem;
@@ -166,8 +181,8 @@ header {
   justify-content: center;
   text-align: center;
   background-color: #FCF5EE;
-  border-top: 1rem dotted #F7DDDE;
-  border-bottom: 1rem dotted #F7DDDE;
+  border-top: 1rem dotted white;
+  border-bottom: 1rem dotted white;
   padding: 10% 0 10% 0;
 }
 header h1 {
@@ -177,30 +192,68 @@ header h1 {
   margin: 0 30rem 0 30rem;
   border-radius: 2%;
 }
+@media (max-width: 500px) {
+  header h1 {
+    margin: 0 8rem 0 8rem;
+  }
+}
+header p {
+  font-family: 'Ubuntu', sans-serif;
+  margin-top: 5rem;
+}
 .skills {
   display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-  font-size: 2.5rem;
   background-color: #FBE8E7;
+  font-size: 2.5rem;
+  border-bottom: 1rem dotted white;
 }
 .skills h2 {
   font-size: 4rem;
   text-align: center;
   margin-top: 5rem;
 }
+@media (max-width: 500px) {
+  .skills h2 {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+}
 .skills div {
   width: 50%;
+}
+@media (max-width: 500px) {
+  .skills div {
+    width: 100%;
+  }
 }
 .skills ul {
   display: flex;
   flex-wrap: wrap;
   margin-left: 2rem;
+  font-family: 'Ubuntu', sans-serif;
 }
 .skills ul li {
   padding: 2%;
   width: 25%;
   list-style-type: circle;
+}
+@media (max-width: 500px) {
+  .skills ul li {
+    width: 35%;
+    padding: 3%%;
+  }
+}
+@media (max-width: 500px) {
+  .skills ul {
+    justify-content: center;
+  }
+}
+@media (max-width: 500px) {
+  .skills {
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+  }
 }
 .work-history {
   display: flex;
@@ -213,20 +266,39 @@ header h1 {
   text-align: center;
   margin-top: 5rem;
 }
+@media (max-width: 500px) {
+  .work-history h2 {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+}
 .work-history div {
   width: 50%;
 }
+@media (max-width: 500px) {
+  .work-history div {
+    width: 100%;
+  }
+}
 .work-history table {
   width: 100%;
+  font-family: 'Ubuntu', sans-serif;
 }
-.work-history th {
-  font-weight: bold;
-}
-.work-history td,
-.work-history th {
+.work-history table td,
+.work-history table th {
   border: 1px solid black;
   text-align: left;
   padding: 0.5rem;
+}
+.work-history table th {
+  font-weight: bold;
+}
+@media (max-width: 500px) {
+  .work-history {
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+  }
 }
 .contact {
   display: flex;
@@ -241,6 +313,10 @@ header h1 {
 .contact div {
   background-color: #FCF5EE;
   padding: 2rem 0 2rem 0;
-  border-top: 1rem dotted #F7DDDE;
-  border-bottom: 1rem dotted #F7DDDE;
+  border-top: 1rem dotted white;
+  border-bottom: 1rem dotted white;
+}
+.contact p {
+  font-family: 'Ubuntu', sans-serif;
+  padding: 1rem;
 }
