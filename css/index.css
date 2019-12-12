@@ -1,1 +1,322 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  max-width: 100%;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+/*My code starts here*/
+@font-face {
+  font-family: 'Pacifico';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Pacifico Regular'), local('Pacifico-Regular'), url(https://fonts.gstatic.com/s/pacifico/v16/FwZY7-Qmy14u9lezJ-6H6Mw.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Ubuntu Regular'), local('Ubuntu-Regular'), url(https://fonts.gstatic.com/s/ubuntu/v14/4iCs6KVjbNBYlgoKfw7z.ttf) format('truetype');
+}
+/*mixins*/
+html {
+  font-size: 62.5%;
+  font-family: 'Pacifico', cursive;
+}
+p {
+  line-height: 3rem;
+  font-size: 2rem;
+}
+nav {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  padding: 1% 0 1% 0;
+  font-size: 2rem;
+  background-color: #FBE8E7;
+}
+nav a {
+  text-decoration: none;
+  margin: 0%;
+  background-color: #FFC4D0;
+  color: white;
+  padding: 1rem 2rem 1rem 2rem;
+  border-radius: 5%;
+}
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background-color: #FCF5EE;
+  border-top: 1rem dotted white;
+  border-bottom: 1rem dotted white;
+  padding: 10% 0 10% 0;
+}
+header h1 {
+  font-size: 7rem;
+  background-color: #FBE8E7;
+  padding: 5rem;
+  margin: 0 30rem 0 30rem;
+  border-radius: 2%;
+}
+@media (max-width: 500px) {
+  header h1 {
+    margin: 0 8rem 0 8rem;
+  }
+}
+header p {
+  font-family: 'Ubuntu', sans-serif;
+  margin-top: 5rem;
+}
+.skills {
+  display: flex;
+  background-color: #FBE8E7;
+  font-size: 2.5rem;
+  border-bottom: 1rem dotted white;
+}
+.skills h2 {
+  font-size: 4rem;
+  text-align: center;
+  margin-top: 5rem;
+}
+@media (max-width: 500px) {
+  .skills h2 {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+}
+.skills div {
+  width: 50%;
+}
+@media (max-width: 500px) {
+  .skills div {
+    width: 100%;
+  }
+}
+.skills ul {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 2rem;
+  font-family: 'Ubuntu', sans-serif;
+}
+.skills ul li {
+  padding: 2%;
+  width: 25%;
+  list-style-type: circle;
+}
+@media (max-width: 500px) {
+  .skills ul li {
+    width: 35%;
+    padding: 3%%;
+  }
+}
+@media (max-width: 500px) {
+  .skills ul {
+    justify-content: center;
+  }
+}
+@media (max-width: 500px) {
+  .skills {
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+  }
+}
+.work-history {
+  display: flex;
+  background-color: #F7DDDE;
+  padding: 2% 0 2% 0;
+  font-size: 2.5rem;
+}
+.work-history h2 {
+  font-size: 4rem;
+  text-align: center;
+  margin-top: 5rem;
+}
+@media (max-width: 500px) {
+  .work-history h2 {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+}
+.work-history div {
+  width: 50%;
+}
+@media (max-width: 500px) {
+  .work-history div {
+    width: 100%;
+  }
+}
+.work-history table {
+  width: 100%;
+  font-family: 'Ubuntu', sans-serif;
+}
+.work-history table td,
+.work-history table th {
+  border: 1px solid black;
+  text-align: left;
+  padding: 0.5rem;
+}
+.work-history table th {
+  font-weight: bold;
+}
+@media (max-width: 500px) {
+  .work-history {
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+  }
+}
+.contact {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+  font-size: 2.5rem;
+}
+.contact h3 {
+  font-size: 3rem;
+}
+.contact div {
+  background-color: #FCF5EE;
+  padding: 2rem 0 2rem 0;
+  border-top: 1rem dotted white;
+  border-bottom: 1rem dotted white;
+}
+.contact p {
+  font-family: 'Ubuntu', sans-serif;
+  padding: 1rem;
+}
